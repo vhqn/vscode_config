@@ -15,5 +15,13 @@
                 "workbench.action.focusAuxiliaryBar"
             ]
         }
+    },
+    {
+        "key": "cmd+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.quickOpen"
     }
 ]
