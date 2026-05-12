@@ -1,113 +1,19 @@
 // Place your key bindings in this file to override the defaults
 [
     {
-        "key": "cmd+i",
-        "command": "composerMode.agent",
-        "when": "isMac"
+        "key": "cmd+l",
+        "command": "workbench.action.toggleAuxiliaryBar",
+        "when": "auxiliaryBarVisible"
     },
     {
-        "key": "ctrl+i",
-        "command": "composerMode.agent",
-        "when": "!isMac"
-    },
-    {
-        "key": "cmd+k",
-        "command": "-aipopup.action.modal.generate",
-        "when": "isMac && editorFocus && !composerBarIsVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "-aipopup.action.modal.generate",
-        "when": "!isMac && editorFocus && !composerBarIsVisible"
-    },
-    {
-        "key": "cmd+k",
-        "command": "-editor.action.inlineDiffs.focusEditor",
-        "when": "isMac && editorHasPromptBar && editorPromptBarFocused"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "-editor.action.inlineDiffs.focusEditor",
-        "when": "!isMac && editorHasPromptBar && editorPromptBarFocused"
-    },
-    {
-        "key": "cmd+k",
-        "command": "-workbench.debug.panel.action.clearReplAction",
-        "when": "isMac && focusedView == 'workbench.panel.repl.view'"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "-workbench.debug.panel.action.clearReplAction",
-        "when": "!isMac && focusedView == 'workbench.panel.repl.view'"
-    },
-    {
-        "key": "cmd+k",
-        "command": "-cursorai.action.generateInTerminal",
-        "when": "isMac && (terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalPromptBarVisible || terminalProcessSupported && terminalPromptBarVisible)"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "-cursorai.action.generateInTerminal",
-        "when": "!isMac && (terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalPromptBarVisible || terminalProcessSupported && terminalPromptBarVisible)"
-    },
-    {
-        "key": "cmd+t",
-        "command": "-workbench.action.agentLayout.newAgent.cmdT",
-        "when": "isMac && !isInBackgroundComposerWindow && cursor.appLayout == 'agent'"
-    },
-    {
-        "key": "ctrl+t",
-        "command": "-workbench.action.agentLayout.newAgent.cmdT",
-        "when": "!isMac && !isInBackgroundComposerWindow && cursor.appLayout == 'agent'"
-    },
-    {
-        "key": "cmd+t",
-        "command": "-workbench.action.showAllSymbols",
-        "when": "isMac"
-    },
-    {
-        "key": "ctrl+t",
-        "command": "-workbench.action.showAllSymbols",
-        "when": "!isMac"
-    },
-    {
-        "key": "cmd+t",
-        "command": "workbench.action.quickOpen",
-        "when": "isMac"
-    },
-    {
-        "key": "ctrl+t",
-        "command": "workbench.action.quickOpen",
-        "when": "!isMac"
-    },
-    {
-        "key": "cmd+p",
-        "command": "-workbench.action.quickOpen",
-        "when": "isMac"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "-workbench.action.quickOpen",
-        "when": "!isMac"
-    },
-    {
-        "key": "shift+alt+down",
-        "command": "deleteRight",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+d",
-        "command": "-deleteRight",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "cmd+m cmd+p",
-        "command": "-workbench.action.showAllEditors",
-        "when": "isMac"
-    },
-    {
-        "key": "ctrl+m ctrl+p",
-        "command": "-workbench.action.showAllEditors",
-        "when": "!isMac"
+        "key": "cmd+l",
+        "command": "runCommands",
+        "when": "!auxiliaryBarVisible",
+        "args": {
+            "commands": [
+                "chatgpt.openSidebar",
+                "workbench.action.focusAuxiliaryBar"
+            ]
+        }
     }
 ]
