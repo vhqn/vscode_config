@@ -15,24 +15,16 @@
         "command": "runCommands",
         "args": {
             "commands": [
-                "workbench.action.terminal.copySelection",
-                "claude-vscode.sidebar.open",
-                "workbench.action.focusAuxiliaryBar",
-                "editor.action.clipboardPasteAction"
-            ]
-        },
-        "when": "terminalFocus && terminalHasSelection && !claude-vscode.sideBarActive"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "runCommands",
-        "args": {
-            "commands": [
                 "claude-vscode.sidebar.open",
                 "workbench.action.focusAuxiliaryBar"
             ]
         },
-        "when": "terminalFocus && !terminalHasSelection && !claude-vscode.sideBarActive"
+        "when": "terminalFocus && !claude-vscode.sideBarActive"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusAuxiliaryBar",
+        "when": "terminalFocus && claude-vscode.sideBarActive"
     },
     {
         "key": "ctrl+l",
@@ -43,23 +35,6 @@
         "key": "ctrl+l",
         "command": "workbench.action.closeAuxiliaryBar",
         "when": "!terminalFocus && claude-vscode.sideBarActive && !editorFocus && !panelFocus"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "runCommands",
-        "args": {
-            "commands": [
-                "workbench.action.terminal.copySelection",
-                "workbench.action.focusAuxiliaryBar",
-                "editor.action.clipboardPasteAction"
-            ]
-        },
-        "when": "terminalFocus && terminalHasSelection && claude-vscode.sideBarActive"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.focusAuxiliaryBar",
-        "when": "terminalFocus && !terminalHasSelection && claude-vscode.sideBarActive"
     },
     {
         "key": "ctrl+b",
