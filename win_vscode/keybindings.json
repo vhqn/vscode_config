@@ -21,7 +21,18 @@
                 "editor.action.clipboardPasteAction"
             ]
         },
-        "when": "terminalFocus && !claude-vscode.sideBarActive"
+        "when": "terminalFocus && terminalHasSelection && !claude-vscode.sideBarActive"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "claude-vscode.sidebar.open",
+                "workbench.action.focusAuxiliaryBar"
+            ]
+        },
+        "when": "terminalFocus && !terminalHasSelection && !claude-vscode.sideBarActive"
     },
     {
         "key": "ctrl+l",
@@ -43,7 +54,12 @@
                 "editor.action.clipboardPasteAction"
             ]
         },
-        "when": "terminalFocus && claude-vscode.sideBarActive"
+        "when": "terminalFocus && terminalHasSelection && claude-vscode.sideBarActive"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusAuxiliaryBar",
+        "when": "terminalFocus && !terminalHasSelection && claude-vscode.sideBarActive"
     },
     {
         "key": "ctrl+b",
