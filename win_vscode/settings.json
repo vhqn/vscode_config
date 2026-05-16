@@ -67,5 +67,6 @@
         "claude-vscode.sidebar.open",
         "workbench.action.focusAuxiliaryBar",
         "workbench.action.toggleSidebarVisibility"
-    ]
+    ],
+    "extensions.ignoreRecommendations": true
 }
