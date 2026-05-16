@@ -79,25 +79,5 @@
         "key": "ctrl+down",
         "command": "editor.action.moveLinesDownAction",
         "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+pageup",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+pagedown",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+ctrl+pageup",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+ctrl+pagedown",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus"
     }
 ]
