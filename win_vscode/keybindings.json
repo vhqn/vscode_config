@@ -51,7 +51,7 @@
     {
         "key": "ctrl+k",
         "command": "workbench.action.terminal.sendSequence",
-        "args": { "text": "clear\r" },
+        "args": { "text": "" },
         "when": "terminalFocus"
     },
     {
