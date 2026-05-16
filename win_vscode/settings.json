@@ -1,0 +1,71 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.fontSize": 22,
+    "files.autoSave": "onFocusChange",
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+    "terminal.integrated.fontSize": 22,
+    "git.ignoreLegacyWarning": true,
+    "workbench.editor.enablePreview": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "vscode-office.openOutline": true,
+    "go.toolsManagement.autoUpdate": true,
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "settingsSync.ignoredSettings": [],
+    "workbench.colorCustomizations": {
+        "editor.selectionHighlightBorder": "#1ED76D",
+        "editor.findMatchBackground": "#15ff00a1",
+        "editor.findMatchHighlightBackground": "#f003ffa6",
+        "editor.findRangeHighlightBackground": "#ff9900",
+        "editorOverviewRuler.findMatchForeground": "#17ff02",
+        "scrollbarSlider.activeBackground": "#62fa1b",
+        "scrollbarSlider.hoverBackground": "#fa2a1b",
+        "scrollbarSlider.background": "#c97554",
+        "minimap.background": "#252525"
+    },
+    "pathAlias.aliasMap": {
+        "@": "${cwd}/"
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.rightClickBehavior": "paste",
+    "editor.language.colorizedBracketPairs": [],
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.minimap.showSlider": "always",
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.configureOnOpen": false,
+    "editor.accessibilitySupport": "off",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "security.workspace.trust.enabled": false,
+    "remote.SSH.configFile": "/Users/AlexZhang/.ssh/config.vscode",
+    "git.openRepositoryInParentFolders": "never",
+    "database-client.autoSync": true,
+    "editor.multiCursorLimit": 100000,
+    "workbench.editor.wrapTabs": true,
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "chat.viewSessions.orientation": "stacked",
+    "terminal.integrated.initialHint": false,
+    "roo-cline.debug": false,
+    "roo-cline.allowedCommands": [
+        "git log",
+        "git diff",
+        "git show"
+    ],
+    "roo-cline.deniedCommands": [],
+    "claudeCode.disableLoginPrompt": true,
+    "claudeCode.preferredLocation": "sidebar",
+    "claudeCode.initialPermissionMode": "bypassPermissions",
+    "claudeCode.allowDangerouslySkipPermissions": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "runCommands",
+        "workbench.action.closeAuxiliaryBar",
+        "claude-vscode.sidebar.open",
+        "workbench.action.focusAuxiliaryBar",
+        "workbench.action.toggleSidebarVisibility"
+    ]
+}

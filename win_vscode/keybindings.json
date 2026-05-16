@@ -1,14 +1,40 @@
 [
     {
         "key": "ctrl+l",
-        "command": "workbench.action.chat.icube.open",
-        "when": "!isSoloModeContext",
-        "isAIItem": true
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "claude-vscode.sidebar.open",
+                "workbench.action.focusAuxiliaryBar"
+            ]
+        },
+        "when": "!terminalFocus && !claude-vscode.sideBarActive"
     },
     {
-        "key": "ctrl+u",
-        "command": "-workbench.action.chat.icube.open",
-        "when": "!isSoloModeContext"
+        "key": "ctrl+l",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "claude-vscode.sidebar.open",
+                "workbench.action.focusAuxiliaryBar"
+            ]
+        },
+        "when": "terminalFocus && !claude-vscode.sideBarActive"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.closeAuxiliaryBar",
+        "when": "!terminalFocus && claude-vscode.sideBarActive"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.closeAuxiliaryBar",
+        "when": "terminalFocus && claude-vscode.sideBarActive"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "terminalFocus"
     },
     {
         "key": "ctrl+k",
