@@ -15,8 +15,10 @@
         "command": "runCommands",
         "args": {
             "commands": [
+                "workbench.action.terminal.copySelection",
                 "claude-vscode.sidebar.open",
-                "workbench.action.focusAuxiliaryBar"
+                "workbench.action.focusAuxiliaryBar",
+                "editor.action.clipboardPasteAction"
             ]
         },
         "when": "terminalFocus && !claude-vscode.sideBarActive"
@@ -33,7 +35,14 @@
     },
     {
         "key": "ctrl+l",
-        "command": "workbench.action.focusAuxiliaryBar",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.terminal.copySelection",
+                "workbench.action.focusAuxiliaryBar",
+                "editor.action.clipboardPasteAction"
+            ]
+        },
         "when": "terminalFocus && claude-vscode.sideBarActive"
     },
     {
