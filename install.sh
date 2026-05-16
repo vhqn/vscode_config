@@ -1,50 +1,48 @@
 #!/usr/bin/env bash
-# install.sh — Link vscode/keybindings.json to VSCode on macOS/Linux
-
+# install.sh — Link macOS VSCode config files
+# Usage: ./install.sh
 set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SRC="$DOTFILES_DIR/vscode/keybindings.json"
+SRC_DIR="$DOTFILES_DIR/mac_vscode"
 
-# Detect OS
 OS="$(uname -s)"
 
 if [[ "$OS" == "Darwin" ]]; then
-  APP_DIRS=(
-    "$HOME/Library/Application Support/Code/User"
-  )
+  TARGET_DIR="$HOME/Library/Application Support/Code/User"
 elif [[ "$OS" == "Linux" ]]; then
-  APP_DIRS=(
-    "$HOME/.config/Code/User"
-  )
+  TARGET_DIR="$HOME/.config/Code/User"
 else
   echo "Unsupported OS: $OS"
   exit 1
 fi
 
-link_file() {
-  local dst="$1"
-  local dir
-  dir="$(dirname "$dst")"
+if [[ ! -d "$TARGET_DIR" ]]; then
+  echo "[error] VSCode User directory not found: $TARGET_DIR"
+  echo "Make sure VSCode is installed and has been launched at least once."
+  exit 1
+fi
 
-  if [[ ! -d "$dir" ]]; then
-    echo "  [skip] directory not found: $dir"
-    return
+echo "==> Linking VSCode config..."
+
+CONFIG_FILES=("keybindings.json" "settings.json")
+
+for file in "${CONFIG_FILES[@]}"; do
+  src="$SRC_DIR/$file"
+  dst="$TARGET_DIR/$file"
+
+  if [[ ! -f "$src" ]]; then
+    echo "  [skip] source not found: $src"
+    continue
   fi
 
-  # Backup if a real file (not already a symlink)
   if [[ -e "$dst" && ! -L "$dst" ]]; then
     echo "  [backup] $dst -> $dst.bak"
     mv "$dst" "$dst.bak"
   fi
 
-  ln -sf "$SRC" "$dst"
-  echo "  [linked] $dst"
-}
-
-echo "==> Linking keybindings.json ..."
-for dir in "${APP_DIRS[@]}"; do
-  link_file "$dir/keybindings.json"
+  ln -sf "$src" "$dst"
+  echo "  [linked] $src -> $dst"
 done
 
 echo ""
