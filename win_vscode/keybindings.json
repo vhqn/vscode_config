@@ -49,5 +49,15 @@
     {
         "key": "ctrl+t",
         "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.closePanel",
+        "when": "terminalFocus"
     }
 ]
