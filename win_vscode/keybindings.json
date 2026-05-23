@@ -16,21 +16,14 @@
         "args": {
             "commands": [
                 "claude-vscode.sidebar.open",
-                "workbench.action.focusAuxiliaryBar",
-                "editor.action.clipboardPasteAction"
+                "workbench.action.focusAuxiliaryBar"
             ]
         },
         "when": "terminalFocus && !claude-vscode.sideBarActive"
     },
     {
         "key": "ctrl+l",
-        "command": "runCommands",
-        "args": {
-            "commands": [
-                "workbench.action.focusAuxiliaryBar",
-                "editor.action.clipboardPasteAction"
-            ]
-        },
+        "command": "workbench.action.focusAuxiliaryBar",
         "when": "terminalFocus && claude-vscode.sideBarActive"
     },
     {
