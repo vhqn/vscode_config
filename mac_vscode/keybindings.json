@@ -23,5 +23,44 @@
     {
         "key": "cmd+t",
         "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+shift+l",
+        "command": "workbench.action.toggleAuxiliaryBar",
+        "when": "auxiliaryBarVisible && !editorTextFocus && !terminalFocus"
+    },
+    {
+        "key": "cmd+shift+l",
+        "command": "runCommands",
+        "when": "editorTextFocus && editorHasSelection",
+        "args": {
+            "commands": [
+                "chatgpt.addToThread",
+                "chatgpt.openSidebar",
+                "workbench.action.focusAuxiliaryBar"
+            ]
+        }
+    },
+    {
+        "key": "cmd+shift+l",
+        "command": "runCommands",
+        "when": "editorTextFocus && !editorHasSelection",
+        "args": {
+            "commands": [
+                "chatgpt.openSidebar",
+                "workbench.action.focusAuxiliaryBar"
+            ]
+        }
+    },
+    {
+        "key": "cmd+shift+l",
+        "command": "runCommands",
+        "when": "terminalFocus",
+        "args": {
+            "commands": [
+                "chatgpt.openSidebar",
+                "workbench.action.focusAuxiliaryBar"
+            ]
+        }
     }
 ]
