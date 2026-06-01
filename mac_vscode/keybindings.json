@@ -17,6 +17,22 @@
         }
     },
     {
+        "key": "cmd+i",
+        "command": "workbench.action.toggleAuxiliaryBar",
+        "when": "auxiliaryBarVisible"
+    },
+    {
+        "key": "cmd+i",
+        "command": "runCommands",
+        "when": "!auxiliaryBarVisible",
+        "args": {
+            "commands": [
+                "claude-vscode.sidebar.open",
+                "claude-vscode.focus"
+            ]
+        }
+    },
+    {
         "key": "cmd+t",
         "command": "-workbench.action.showAllSymbols"
     },
